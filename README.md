@@ -21,9 +21,11 @@ By merging soft computing paradigms with modern automation, the system minimizes
 
 | Role | Name | Section | Enrollment No. / PRN |
 | :--- | :--- | :--- | :--- |
-| **Team Leader** | Raj Ali | Section 32 | *[Enter Enrollment No.]* |
-| **Member 2** | Swati Singh | Section 32 | *[Enter Enrollment No.]* |
-| **Member 3** | Harsh Saxena | Section 32 | *[Enter Enrollment No.]* |
+| **Team Leader** | Raj Ali | Section 32 | *25SCSE1410097* |
+| **Member 2** | Sahitya Kumar | Section 32 | *24SCSE1410056* |
+| **Member 2** | Swati Singh | Section 32 | *25SCSE1410098* |
+| **Member 3** | Nisha | Section 32 | *24SCSE1410351* |
+
 
 ---
 

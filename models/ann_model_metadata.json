@@ -1,0 +1,21 @@
+{
+  "project": "SC07 Smart Irrigation System",
+  "technique": "Feed-forward ANN / backpropagation",
+  "architecture": "11 inputs -> (16, 8) -> 1 output",
+  "features": [
+    "Soil_pH",
+    "Soil_Moisture",
+    "Organic_Carbon",
+    "Electrical_Conductivity",
+    "Temperature_C",
+    "Humidity",
+    "Rainfall_mm",
+    "Sunlight_Hours",
+    "Wind_Speed_kmh",
+    "Field_Area_hectare",
+    "Previous_Irrigation_mm"
+  ],
+  "target": "Irrigation_Need",
+  "random_seed": 42,
+  "export_timestamp": "2026-10-09 01:50:25"
+}

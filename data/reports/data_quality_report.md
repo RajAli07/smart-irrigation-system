@@ -1,36 +1,37 @@
-# SC07 Data Quality Report
+# SC07 Data Quality & Preparation Audit Report
 
-## Purpose
+**Document Version:** 2.0.0 | **Status:** Production-Ready  
+**Lead Data Engineer:** Raj Ali | **Team:** Sahitya, Swati, Nisha
 
-This report records how the Smart Irrigation dataset was inspected, cleaned, validated, and split for the SC07 project[cite: 55].
+## 1. Executive Summary
 
-## Dataset Source
+This technical document outlines the systematic data inspection, cleansing, and stratification procedures executed for the SC07 Smart Irrigation System. The objective of this phase is to establish a high-integrity, sanitized data foundation that prevents downstream anomalies, avoids data leakage, and ensures deterministic reproducibility across all machine learning pipelines.
 
-* **Dataset:** Irrigation Water Requirement Prediction Dataset[cite: 55]
-* **Source:** Kaggle
-* **Original records:** 10,000+
-* **Target column:** Irrigation_Need[cite: 55]
+## 2. Dataset Provenance & Schema
 
-## Cleaning Method
+* **Source:** Kaggle (Irrigation Water Requirement Prediction Dataset)
+* **Raw Volume:** 10,000+ unverified records
+* **Feature Space:** 11 Environmental and Soil Parameters
+* **Target Variable:** `Irrigation_Need` (Binary Classification)
 
-* The original raw CSV was not modified[cite: 55].
-* Missing numeric values were filled using the median of their own column[cite: 55].
-* Exact duplicate rows were removed[cite: 55].
+## 3. Data Cleansing & Imputation Methodology
 
-## Reproducible Split
+* **Duplicate Resolution:** Exact duplicate rows were identified and purged to prevent frequency bias.
+* **Outlier-Robust Imputation:** Missing numerical values were resolved utilizing **Median Imputation**. The median is statistically resistant to extreme environmental outliers.
 
-A fixed random seed of 42 was used. The data was split separately to preserve the balanced class distribution[cite: 56].
+## 4. Stratified Partitioning Protocol
 
-| Dataset | Rows | Purpose |
-| :--- | :--- | :--- |
-| `train.csv` | 7,000 | Model training[cite: 56] |
-| `validation.csv` | 1,500 | Model selection and tuning[cite: 56] |
-| `test.csv` | 1,500 | Final unseen evaluation[cite: 56] |
-| **Total** | **10,000** | **Complete cleaned dataset**[cite: 56] |
+To guarantee equitable class distributions, the dataset was partitioned using **Stratified Sampling**. A deterministic random seed (`random_state=42`) was enforced.
 
-## Output Files
+| Split Asset | Record Count | Allocation | Strategic Purpose |
+| :--- | :--- | :--- | :--- |
+| `train.csv` | ~7,000 | 70% | Primary model training and weight optimization |
+| `validation.csv` | ~1,500 | 15% | Hyperparameter tuning and early-stopping |
+| `test.csv` | ~1,500 | 15% | Final, unbiased evaluation on unseen data |
 
-The pipeline created these files in `data/processed/`[cite: 56]:
+## 5. Serialized Artifacts
+
+The automated pipeline successfully generated the following processed assets in `data/processed/`:
 
 * `irrigation_clean.csv`
 * `train.csv`

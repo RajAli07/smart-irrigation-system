@@ -1,7 +1,7 @@
 # Step 3: Artificial Neural Network (ANN) Model Development
 
 **Project:** SC07 Smart Irrigation System  
-**Lead:** Raj Ali | **Team:** Sahitya, Swati, Nisha  
+**Lead:** Raj Ali | **Team:** Sahitya, Swati, Nisha, Aditya  
 **Document Version:** 1.0.0 | **Status:** Production-Ready
 
 ---

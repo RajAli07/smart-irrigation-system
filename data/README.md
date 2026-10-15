@@ -25,6 +25,7 @@ By merging soft computing paradigms with modern automation, the system minimizes
 | **Member 2** | Sahitya Kumar | Section 32 | *24SCSE1410056* |
 | **Member 3** | Swati Singh | Section 32 | *25SCSE1410098* |
 | **Member 4** | Nisha | Section 32 | *24SCSE1410351* |
+| **Member 5** | Aditya kumar | Section 32 | *25SCSE1410112* |
 
 
 ---
